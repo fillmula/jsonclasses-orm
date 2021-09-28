@@ -8,7 +8,7 @@ HERE = Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
 setup(name='jsonclasses-orm',
-      version='2.8.0',
+      version='2.8.1',
       description='Definitions for JSONClasses ORM integration implementation.',
       long_description=README,
       long_description_content_type="text/markdown",
