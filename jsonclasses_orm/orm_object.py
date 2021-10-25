@@ -2,9 +2,8 @@
 ORM integrations should implement.
 """
 from __future__ import annotations
-from typing import TypeVar, Any, Union, TYPE_CHECKING
-from bson.objectid import ObjectId
-from jsonclasses.jobject import JObject
+from typing import TypeVar, Any, TYPE_CHECKING
+from .jobject import JObject
 if TYPE_CHECKING:
     from .orm_query import (
         BaseQuery, ListQuery, IDQuery, SingleQuery, ExistQuery, IterateQuery
@@ -29,11 +28,11 @@ class ORMObject(JObject):
         ...
 
     @classmethod
-    def id(cls: type[T], id: Union[str, ObjectId]) -> IDQuery[T]:
+    def id(cls: type[T], id: Any, *args, **kwargs) -> IDQuery[T]:
         ...
 
     @classmethod
-    def linked(cls: type[T]) -> BaseQuery[T]:
+    def linked(cls: type[T], *args, **kwargs: Any) -> BaseQuery[T]:
         ...
 
     @classmethod

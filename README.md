@@ -1,4 +1,4 @@
-JSONClasses ORM
+Deprecated Note
 ===============
 
-ORM definitions for JSONClasses ORM integration implementation.
+This is deprecated and it has been integrated into the main jsonclasses package.
